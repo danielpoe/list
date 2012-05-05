@@ -8,6 +8,10 @@
 	tceDbFormTockenParameter = '<list:TCEForms.FormTocken formName="tceAction" />';
 	pageId = '{pageId}';
 </script>
+
+<f:for each="{listConfigurations}" as="listConfiguration">	
+	<list:widget.list configuration="{listConfiguration}" renderLayout="Layout/CompactList"  />
+</f:for>
 	
 <f:render partial="List/Dialogs" />
 	
