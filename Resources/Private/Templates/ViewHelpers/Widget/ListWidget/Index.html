@@ -1,0 +1,13 @@
+{namespace list=Tx_List_ViewHelpers}
+
+
+<f:if condition="{renderLayout}" >
+	<f:then>
+		<f:render partial="{renderLayout}" arguments="{arguments}"  />
+	</f:then>
+	<f:else>
+		<f:render partial="Layout/CompactList" arguments="{arguments}" />
+	</f:else>
+
+</f:if>
+

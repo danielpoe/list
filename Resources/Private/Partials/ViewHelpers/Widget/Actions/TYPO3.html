@@ -1,0 +1,5 @@
+{namespace list=Tx_List_ViewHelpers}
+
+<a href="javascript:TYPO3Actions.editRecord('{listItem.recordType}','{listItem.uid}')" class="button">Edit</a>
+<a href="javascript:TYPO3Actions.deleteRecord('{listItem.recordType}','{listItem.uid}')" class="button">Delete</a>
+<list:TCEForms.ShowHideLink listItem="{listItem}" hideLabel="hide" class="button" showLabel="show" />

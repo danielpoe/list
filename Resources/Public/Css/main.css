@@ -1,0 +1,69 @@
+@CHARSET "UTF-8";
+body { font-family: Verdana,Arial,sans-serif;}
+.listwidget h2, .listwidget h3 { margin: 5px 0 0 0}
+table.typo3-table { border-collapse: collapse; border: 1px solid gray; width: 100%}
+table.typo3-table td, table.typo3-table th { padding: 0 5px 0 5px; position: relative; border: 1px solid gray; text-align: left;}
+
+table.typo3-table .ui-sortindicator {background: url('../Icons/sortIcon.gif') no-repeat; width: 15px; height: 15px; cursor: move; float: left}
+table.typo3-table .ui-moreoptionindicator {background: url('../Icons/down_icon1.gif') no-repeat; width: 15px; height: 15px; cursor: pointer; }
+
+.list-controls {font-size: 13px; padding: 5px}
+
+.ui-roundedcornerbox {
+	background-color: #ffffff;
+	border: 1px solid #999999;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	-moz-box-shadow: 2px 2px 3px #000000;
+	-webkit-box-shadow: 2px 2px 3px #000000;
+	box-shadow: 2px 2px 3px #000000;
+	filter: progid: DXImageTransform.Microsoft.Shadow(strength = 2, direction = 135, color = '#000000');
+	-ms-filter: "progid: DXImageTransform.Microsoft.Shadow(strength = 2, Direction = 135, Color = '#000000')";
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#e3e3e3', endColorstr = '#bfbfbf');
+	-ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#e3e3e3', endColorstr = '#bfbfbf')";
+	background-image: -moz-linear-gradient(top, #e3e3e3, #bfbfbf);
+	background-image: -ms-linear-gradient(top, #e3e3e3, #bfbfbf);
+	background-image: -o-linear-gradient(top, #e3e3e3, #bfbfbf);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#e3e3e3), to(#bfbfbf));
+	background-image: -webkit-linear-gradient(top, #e3e3e3, #bfbfbf);
+	background-image: linear-gradient(top, #e3e3e3, #bfbfbf);
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	margin: 10px 0 0 0;
+}
+.listwidget-header {
+	padding: 10px;
+}
+.listwidget-header h2 { margin: 0 10px 5px 0 }
+/* 
+	Filtermenu - LEVEL ONE Menu
+*/
+ul.dropdown * 						{ margin: 0; padding: 0; }
+ul.dropdown                         { position: relative; z-index: 2000; list-style: none; float: right; margin: 0; padding: 0;}
+ul.dropdown ul 						{ list-style: none; }
+ul.dropdown li                      { font-weight: bold; float: left; zoom: 1; background: #ccc; }
+ul.dropdown a:hover		            { color: #000; }
+ul.dropdown a:active                { color: #ffa500; }
+ul.dropdown li a                    { display: block; padding: 4px 8px; border-right: 1px solid #333;
+	 								  color: #222;  text-decoration: none;}
+ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
+ul.dropdown li.hover,
+ul.dropdown li:hover                { background: #F3D673; color: black; position: relative; }
+ul.dropdown li.hover a              { color: black; }
+/* 
+	Filter menu - LEVEL TWO
+*/
+ul.dropdown ul 						{ width: 220px; visibility: hidden; position: absolute; top: 100%; right: 0; }
+ul.dropdown ul li 					{ font-weight: normal; background: #f6f6f6; color: #000; 
+									  border-bottom: 1px solid #ccc; float: none; }
+									  
+                                    /* IE 6 & 7 Needs Inline Block */
+ul.dropdown ul li a					{ border-right: none; width: 100%; display: inline-block; } 
+/* 
+	Filtermenu - LEVEL THREE
+*/
+ul.dropdown ul ul 					{ left: 100%; top: 0; }
+ul.dropdown ul ul.leftslideout 		{ right: 100%; left: auto; top: 0; }
+ul.dropdown li:hover > ul 			{ visibility: visible; }

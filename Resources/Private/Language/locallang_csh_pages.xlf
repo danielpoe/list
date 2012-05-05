@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-04-18T16:37:18Z" product-name="list">
+		<header/>
+		<body>
+
+			<trans-unit id="pid.description">
+				<source>pid</source>
+			</trans-unit>
+			<trans-unit id="deleted.description">
+				<source>deleted</source>
+			</trans-unit>
+			<trans-unit id="is_siteroot.description">
+				<source>isSiteroot</source>
+			</trans-unit>
+			<trans-unit id="starttime.description">
+				<source>starttime</source>
+			</trans-unit>
+			<trans-unit id="endtime.description">
+				<source>endtime</source>
+			</trans-unit>
+			<trans-unit id="nav_title.description">
+				<source>navTitle</source>
+			</trans-unit>
+			<trans-unit id="subtitle.description">
+				<source>subtitle</source>
+			</trans-unit>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

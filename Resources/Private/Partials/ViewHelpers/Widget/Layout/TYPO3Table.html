@@ -1,0 +1,20 @@
+{namespace list=Tx_List_ViewHelpers}
+
+	<table class="ui-widget listwidget-table typo3-table ui-corner-all" id="uniquezableifd">
+		<thead class="ui-widget-header">
+			<tr>
+				<th>Sort</th>
+				<th>Label</th>
+				<f:for each="{listConfiguration.activeColumns}" as="column">
+					<th>{column.label}<f:render partial="Row/columnOptions" arguments="{column: column, isLast: false}"></f:render></th>
+				</f:for>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody class="ui-widget-content">
+			<f:for each="{listItems}" as="listItem">
+				<f:render partial="Row/DefaultListItemRow" arguments="{listItem: listItem, listConfiguration: listConfiguration}"></f:render>
+			</f:for>			
+		</tbody>
+	</table>
+	<a href="#">Select / unselecl all</a> With selected: <label></label><select><option>Edit</option><option>Hide</option><option>Delete</option></select>

@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link type="text/css" href="Css/smoothness/jquery-ui-1.8.19.custom.css" rel="stylesheet" />
+	<link type="text/css" href="Css/main.css" rel="stylesheet" />
+	<title>Insert title here</title>
+	<style>
+
+				.listwidget table tr.ui-selected {background: #F39814; color: white;}
+				.listwidget table tr.ui-selecting { background: #FECA40; }
+	</style>
+	<script type="text/javascript" src="JavaScript/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="JavaScript/jquery-ui-1.8.19.custom.min.js"></script>
+	<script type="text/javascript" src="JavaScript/simpleresizeabletables.js"></script>
+	<script type="text/javascript" language="javascript" src="JavaScript/jquery.dropdownPlain.js"></script>
+	<script type="text/javascript">
+	$(function() {
+
+		// Return a helper with preserved width of cells
+		var fixHelper = function(e, ui) {
+		    ui.children().each(function() {
+		        $(this).width($(this).width());
+		    });
+		    return ui;
+		};
+		 
+		$(".typo3-table tbody").sortable({helper: fixHelper, cursor: 'crosshair', handle: '.sorthandle'}).disableSelection();
+		
+		// $('.typo3-table tbody').sortable({  });
+
+		 $( ".typo3-table tbody" ).selectable();
+
+		 $( ".typo3-table" ).simpleResizableTable();
+
+		 $( ".accordion" ).accordion();
+
+		 $('.button').button();
+		 
+		// set effect from select menu value
+		$( ".toggle .ui-widget-header" ).click(function(e) {
+			$(this).parent().find('.togglecontent').toggle( 'blind');
+		});
+	})
+	</script>
+</head>
+
+<body>
+
+
+
+<form class="listform">
+<div class="listwidget ui-roundedcornerbox">
+	<h2>News Records</h2>
+	<div class="list-controls">
+		<div class="search  ui-widget-content ui-corner-all toggle">
+			<h3 class="ui-widget-header ui-corner-all">Search and Filter</h3>
+			<div class="togglecontent">
+				<label for="search">Search:</label><input type="text"></input>
+				<p>Active Filters: one, two. <a href="#" class="button">Clear Filters</a></p>
+			</div>
+		</div>
+		<div class="options ui-widget-content ui-corner-all toggle">
+			<h3 class="ui-widget-header ui-corner-all">Options (Toggle)</h3>
+			<div class="togglecontent">
+				<input type="checkbox" id="localview-1" /><label for="localview-1">Group by localisation</label>
+				<div class="ui-helper-clearfix"></div>
+				<label for="localview-1">Show Languages</label><select><option>English</option><option>German</option><option>German</option></select>
+			</div>
+		</div>
+	</div>
+
+
+	<table class="ui-widget typo3-table ui-corner-all" id="uniquezableifd">
+		<thead class="ui-widget-header">
+			<tr><th>Select</th><th>Label</th>
+			
+			<th><ul class="dropdown">
+	        		<li><div class="ui-moreoptionindicator"></div>
+	        		<ul class="sub_menu">
+	        			 <li><a href="#">Sort up</a></li>
+	        			 <li><a href="#">Sort down</a></li>
+	        			 <li>
+	        				<a href="#">Filter</a>
+	        				<ul>
+	        					<li><input type="text" placeholder="type in value" /></li>
+	        					<li><input type="checkbox" />on</li>
+	        				</ul>
+	        			 </li>
+	        		</ul>
+	        		</li>
+	        	</ul>Date			
+			</th>			
+			<th><ul class="dropdown">
+	        		<li><div class="ui-moreoptionindicator"></div>
+	        		<ul class="sub_menu">
+	        			 <li><a href="#">Sort up</a></li>
+	        			 <li><a href="#">Sort down</a></li>
+	        			 <li>
+	        				<a href="#">Filter</a>
+	        				<ul class="leftslideout">
+	        					<li><input type="text" placeholder="type in value" /></li>
+	        					<li><input type="checkbox" />on</li>
+	        				</ul>
+	        			 </li>
+	        		</ul>
+	        		</li>
+	        	</ul>Boolean			
+			</th>
+			<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody  class="ui-widget-content">
+			<tr><td><div class="ui-sortindicator sorthandle"></div><input type="checkbox" ></input></td><td>Test</td><td>12.12.2012</td><td>1</td><td><a href="#" class="button">Edit</a><a href="#" class="button">Hide</a><a href="#" class="button">Delete</a></td></tr>
+			<tr><td><div class="ui-sortindicator sorthandle"></div><input type="checkbox" ></input></td><td>Test</td><td>12.12.2012</td><td>1</td><td></td></tr>
+			<tr><td><div class="ui-sortindicator sorthandle"></div><input type="checkbox" ></input></td><td>Test</td><td>12.12.2012</td><td>1</td><td></td></tr>
+			<tr><td><div class="ui-sortindicator sorthandle"></div><input type="checkbox" ></input></td><td>Test</td><td>12.12.2012</td><td>1</td><td></td></tr>			
+		</tbody>
+	</table>
+	<a href="#">Select / unselecl all</a> With selected: <label></label><select><option>Edit</option><option>Hide</option><option>Delete</option></select>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-04-17T16:37:17Z" product-name="list">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_list_domain_model_widgetconfiguration">
+				<source>Widget Configuration</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_widgetconfiguration.tx_list_table">
+				<source>Table</source>
+			</trans-unit>
+
+			<trans-unit id="tx_list_domain_model_pages">
+				<source>Pages</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.pid">
+				<source>Pid</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.deleted">
+				<source>Deleted</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.is_siteroot">
+				<source>Is Siteroot</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.starttime">
+				<source>Starttime</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.endtime">
+				<source>Endtime</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.nav_title">
+				<source>Nav Title</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.subtitle">
+				<source>Subtitle</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.title">
+				<source>Title</source>
+			</trans-unit>
+			
+			<trans-unit id="pages.tx_extbase_type.Tx_List_Pages">
+				<source>list renewed Pages</source>
+			</trans-unit>
+			
+		</body>
+	</file>
+</xliff>

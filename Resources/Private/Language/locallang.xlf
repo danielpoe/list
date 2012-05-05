@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-04-17T16:37:17Z" product-name="list">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_list_domain_model_widgetconfiguration">
+				<source>WidgetConfiguration</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_widgetconfiguration.tx_list_table">
+				<source>table</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_list_domain_model_pages">
+				<source>Pages</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.pid">
+				<source>pid</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.deleted">
+				<source>deleted</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.is_siteroot">
+				<source>isSiteroot</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.starttime">
+				<source>starttime</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.endtime">
+				<source>endtime</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.nav_title">
+				<source>navTitle</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.subtitle">
+				<source>subtitle</source>
+			</trans-unit>
+			<trans-unit id="tx_list_domain_model_pages.title">
+				<source>title</source>
+			</trans-unit>
+			
+		</body>
+	</file>
+</xliff>

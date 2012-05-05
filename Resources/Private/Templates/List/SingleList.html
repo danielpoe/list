@@ -1,0 +1,16 @@
+{namespace list=Tx_List_ViewHelpers}
+<f:layout name="BackendModule" />
+
+<f:section name="main">
+
+<script>
+	userSessionToken = '<list:TCEForms.SessionTocken />';
+	tceDbFormTockenParameter = '<list:TCEForms.FormTocken formName="tceAction" />';
+	pageId = '{pageId}';
+</script>
+
+<list:widget.list configuration="{listConfiguration}" renderLayout="Layout/FullList"  />
+
+<f:render partial="List/Dialogs" />
+
+</f:section>

@@ -1,0 +1,8 @@
+<div class="availablefields  ui-widget-content ui-corner-all toggle">
+	<h3 class="ui-widget-header ui-corner-all">Active Columns:</h3>
+	<div class="togglecontent">
+		<label for="activeColumns">Active Columns:</label>
+		<f:form.select name="{widgetIdentifier}[listItemRequest][activeColumns]"  multiple="1" size="10" sortByOptionLabel="1"  value="{listItemRequest.activeColumns}" options="{listConfiguration.availableColumns}" optionValueField="fieldName" optionLabelField="label" />
+		<f:form.submit value="Set" />
+	</div>
+</div>

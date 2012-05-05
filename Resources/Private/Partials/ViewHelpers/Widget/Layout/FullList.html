@@ -1,0 +1,22 @@
+{namespace list=Tx_List_ViewHelpers}
+
+
+<f:form action="singleList" class="listform" name="{widgetIdentifier}" controller="List" extensionName="list" pluginName="web_listlist" arguments="{configurationKey: listConfiguration.key}">
+	
+	<div class="listwidget listwidget-full ui-roundedcornerbox">
+		<div class="listwidget-header">
+			<h2>{listConfiguration.label}</h2>		
+			<a href="#" onclick="TYPO3Actions.createRecordOnPage('{defaultRecordType}')" class="button">Create new</a>
+			<f:link.action action="index" controller="List" extensionName="list" pluginName="web_listlist" arguments="{recordType: defaultRecordType}" class="button">Back to show all</f:link.action>
+		</div>
+	
+		<div class="list-controls">		
+			<f:render partial="controls/listSearch" arguments="{parameterNameSpace: parameterNameSpace, widgetIdentifier:widgetIdentifier, listItemRequest:listItemRequest, listConfiguration: listConfiguration}"></f:render>		
+			<f:render partial="controls/activeColumnsSelect" arguments="{parameterNameSpace: parameterNameSpace, widgetIdentifier:widgetIdentifier, listItemRequest:listItemRequest, listConfiguration: listConfiguration}"></f:render>
+			<f:render partial="controls/localisationOptions" arguments="{parameterNameSpace: parameterNameSpace, widgetIdentifier:widgetIdentifier, listItemRequest:listItemRequest, listConfiguration: listConfiguration}"></f:render>	
+		</div>
+	
+		<f:render partial="Layout/TYPO3Table" arguments="{parameterNameSpace: parameterNameSpace, widgetIdentifier:widgetIdentifier, listItemRequest:listItemRequest, listConfiguration: listConfiguration, listItems:listItems}" />
+		<f:form.submit value="Refresh" />
+	</div>
+</f:form>

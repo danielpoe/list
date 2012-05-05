@@ -1,0 +1,11 @@
+# Module configuration
+module.tx_list {
+	persistence {
+		storagePid = {$module.tx_list.persistence.storagePid}
+	}
+	view {
+		templateRootPath = {$module.tx_list.view.templateRootPath}
+		partialRootPath = {$module.tx_list.view.partialRootPath}
+		layoutRootPath = {$module.tx_list.view.layoutRootPath}
+	}
+}

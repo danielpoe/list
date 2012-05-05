@@ -1,0 +1,14 @@
+{namespace list=Tx_List_ViewHelpers}
+
+
+<f:form action="index" class="listform" name="{widgetIdentifier}" controller="List" extensionName="list" pluginName="web_listlist" >
+	<div class="listwidget listwidget-compact ui-roundedcornerbox">
+		<div class="listwidget-header">
+			<h2>{listConfiguration.label}</h2>		
+			<a href="#" onclick="TYPO3Actions.createRecordOnPage('{defaultRecordType}')" class="button">Create new</a>
+			<f:link.action action="singleList" controller="List" extensionName="list" pluginName="web_listlist" arguments="{configurationKey: listConfiguration.key}" class="button">Full List View</f:link.action>
+		</div>
+		<f:render partial="Layout/TYPO3Table" arguments="{parameterNameSpace: parameterNameSpace, widgetIdentifier:widgetIdentifier, listItemRequest:listItemRequest, listConfiguration: listConfiguration, listItems:listItems}" />
+		<f:form.submit value="Refresh" />
+	</div>
+</f:form>
