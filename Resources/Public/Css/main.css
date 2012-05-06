@@ -1,11 +1,22 @@
 @CHARSET "UTF-8";
 body { font-family: Verdana,Arial,sans-serif;}
 .listwidget h2, .listwidget h3 { margin: 5px 0 0 0}
-table.typo3-table { border-collapse: collapse; border: 1px solid gray; width: 100%}
-table.typo3-table td, table.typo3-table th { padding: 0 5px 0 5px; position: relative; border: 1px solid gray; text-align: left;}
+.listwidget a.button span.ui-icon { float: left }
+.listwidget a.button .ui-button-text {padding: 2px}
 
-table.typo3-table .ui-sortindicator {background: url('../Icons/sortIcon.gif') no-repeat; width: 15px; height: 15px; cursor: move; float: left}
-table.typo3-table .ui-moreoptionindicator {background: url('../Icons/down_icon1.gif') no-repeat; width: 15px; height: 15px; cursor: pointer; }
+table.listwidget-table { border-collapse: collapse; border: 1px solid gray; width: 100%}
+table.listwidget-table td, table.typo3-table th { padding: 0 5px 0 5px; position: relative; border: 1px solid gray; text-align: left;}
+
+table.listwidget-table { font-size: 11px }
+table.listwidget-table .ui-widget-header th { height: 20px }
+table.listwidget-table .row-controls { min-width: 35px; margin-top: 2px }
+table.listwidget-table .row-actions { min-width: 200px; margin-top: 4px; margin-bottom: 4px }
+table.listwidget-table .row-actions .button { min-width: 60px }
+table.listwidget-table .ui-sortindicator {width: 15px; height: 15px; cursor: move!important; float: left; margin: 0 2px 0 0}
+table.listwidget-table .ui-moreoptionindicator {background: url('../Icons/down_icon1.gif') no-repeat; width: 15px; height: 15px; cursor: pointer; }
+
+table.listwidget-table tr.ui-selected { background: yellow}
+
 
 .list-controls {font-size: 13px; padding: 5px}
 

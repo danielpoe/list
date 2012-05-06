@@ -36,19 +36,12 @@ TYPO3Actions =  {
 	},
 	
 	deleteRecord: function(table,id ) {	
-		jQuery( "#dialog-confirm-delete" ).dialog({
-			resizable: false,
-			height:140,
-			modal: true,
-			buttons: {
-				"Delete": function() {
+		WindowsUI.showConfirmation('Really want to delete?','Delete','Delete',
+				function() {
 					TYPO3Actions._doTCEAction('&cmd['+table+']['+id+'][delete]=1');
-				},
-				Cancel: function() {
-					$( this ).dialog( "close" );
 				}
-			}
-		});		
+		);
+		
 	},
 	
 	/******
@@ -90,7 +83,7 @@ TYPO3Actions =  {
 	},
 	
 	_redirectToUrl: function(link) {
-		jQuery('body').addClass('ui-widget-overlay');
+		jQuery('#body-overlay').addClass('ui-widget-overlay');
 		jQuery('.please-wait-container').dialog();
 		window.location.href=link;
 	},

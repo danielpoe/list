@@ -81,6 +81,8 @@ class Tx_List_Controller_ListController extends Tx_Extbase_MVC_Controller_Action
 		$this->pageRenderer->addJsFile(t3lib_extMgm::extRelPath('list') . 'Resources/Public/JavaScript/Libs/simpleresizeabletables.js');
 		$this->pageRenderer->addJsFile(t3lib_extMgm::extRelPath('list') . 'Resources/Public/JavaScript/Libs/jquery.dropdownPlain.js');
 		$this->pageRenderer->addJsFile(t3lib_extMgm::extRelPath('list') . 'Resources/Public/JavaScript/list.js');
+		$this->pageRenderer->addJsFile(t3lib_extMgm::extRelPath('list') . 'Resources/Public/JavaScript/WindowsUI.js');
+		$this->pageRenderer->addJsFile(t3lib_extMgm::extRelPath('list') . 'Resources/Public/JavaScript/WidgetListController.js');
 		$this->pageRenderer->addJsFile(t3lib_extMgm::extRelPath('list') . 'Resources/Public/JavaScript/typo3actions.js');
 		
 	}

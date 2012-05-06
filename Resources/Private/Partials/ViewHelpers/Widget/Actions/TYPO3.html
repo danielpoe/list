@@ -1,5 +1,12 @@
 {namespace list=Tx_List_ViewHelpers}
 
-<a href="javascript:TYPO3Actions.editRecord('{listItem.recordType}','{listItem.uid}')" class="button">Edit</a>
-<a href="javascript:TYPO3Actions.deleteRecord('{listItem.recordType}','{listItem.uid}')" class="button">Delete</a>
-<list:TCEForms.ShowHideLink listItem="{listItem}" hideLabel="hide" class="button" showLabel="show" />
+<a href="#" onclick="TYPO3Actions.editRecord('{listItem.recordType}','{listItem.uid}')" class="button button-edit"><span class="ui-icon ui-icon-pencil"></span>Edit</a>
+<a href="#" onclick="TYPO3Actions.deleteRecord('{listItem.recordType}','{listItem.uid}')" class="button button-delete"><span class="ui-icon ui-icon-trash"></span>Delete</a>
+<list:TCEForms.ListItemIsHiddenCondition listItem="{listItem}">
+	<f:then>
+		<a href="#" onclick="TYPO3Actions.showRecord('{listItem.recordType}','{listItem.uid}')" class="button button-show"><span class="ui-icon ui-icon-bullet"></span>Show</a>
+	</f:then>
+	<f:else>
+		<a href="#" onclick="TYPO3Actions.hideRecord('{listItem.recordType}','{listItem.uid}')" class="button button-show"><span class="ui-icon ui-icon-radio-off"></span>Hide</a>
+	</f:else>
+</list:TCEForms.ListItemIsHiddenCondition>

@@ -1,12 +1,19 @@
 {namespace list=Tx_List_ViewHelpers}
 
 <tr>
-	<td><div class="ui-sortindicator sorthandle"></div><f:form.checkbox name="massactionids" value="{listItem.uid}" /></td>
+	<td>
+		<div class="row-controls">
+			<div class="ui-sortindicator sorthandle"></div>
+			<f:form.checkbox name="massactionids" value="{listItem.uid}" class="massaction-select" />
+		</div>
+	</td>
 	<td><list:typo3.recordicon type="{listItem.recordType}" data="{listItem.columnData}" />{listItem.label}</td>
 	<f:for each="{listConfiguration.activeColumns}" as="column">
-		<td>{listItem.{column.fieldName}}</td>
+		<td><list:FieldDisplay object="{listItem}" fieldName="{column.fieldName}" /></td>
 	</f:for>
 	<td>
-		<f:render partial="Actions/TYPO3" arguments="{listItem: listItem}"></f:render>
+		<div class="row-actions">
+			<f:render partial="Actions/TYPO3" arguments="{listItem: listItem}"></f:render>
+		</div>
 	</td>
 </tr>
